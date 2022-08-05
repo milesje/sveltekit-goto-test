@@ -1,0 +1,150 @@
+/* @import url('https://fonts.googleapis.com/css?family=Nunito:400,700&display=swap'); */
+@import 'nunito-fontface';
+/* Write your global styles here, in PostCSS syntax */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.lessThan {
+	color: red;
+}
+
+.found {
+	background-color: cadetblue;
+}
+
+.mga-item-selected {
+	background-color: #385723;
+	color: #e6edd7;
+	border: 1px solid #e6edd7;
+}
+.ic-itme-selected {
+	background-color: #5b2c6f;
+	color: #ebdef0;
+	border: 1px solid #ebdef0;
+}
+
+input[type='file'] {
+	position: absolute;
+	z-index: -1;
+	top: 15px;
+	left: 20px;
+	font-size: 17px;
+	color: #b8b8b8;
+}
+
+.ic-selected {
+	background-color: theme('colors.surface.dark');
+	color: theme('colors.gray.600');
+}
+
+.ot-selected {
+	background-color: theme('colors.me-ic.dark');
+	color: white;
+}
+
+.ot-has-note {
+	background-color: theme('colors.me-ic.DEFAULT');
+	color: white;
+}
+
+.required:after {
+	content: ' *';
+	color: red;
+}
+
+.hovertext{
+	outline: none;
+  border-color: #9ecaed;
+  box-shadow: 0 0 10px #9ecaed;
+}
+
+.sel-primary {
+	--height: 2rem;
+	--indicatorHeight: 2rem;
+	--itemIsActiveColor: #fff;
+	--itemHoverColor: #fff;
+	--itemIsActiveBG: theme('colors.primary.light');
+	--itemHoverBG: theme('colors.primary.dark');
+	--border: 2px solid theme('colors.primary.DEFAULT');
+	--borderFocusColor: theme('colors.primary.DEFAULT');
+	--borderHoverColor: theme('colors.primary.DEFAULT');
+	--indicatorColor: theme('colors.primary.DEFAULT');
+	--indicatorTop: 0px;
+	--listZIndex: 99999;
+}
+
+.sel-green {
+	--height: 2rem;
+	--indicatorHeight: 2rem;
+	--itemIsActiveColor: #000;
+	--itemHoverColor: #fff;
+	--itemIsActiveBG: theme('colors.me-mga.light');
+	--itemHoverBG: theme('colors.me-mga.dark');
+	--border: 2px solid theme('colors.me-mga.dark');
+	--borderFocusColor: theme('colors.me-mga.dark');
+	--borderHoverColor: theme('colors.me-mga.dark');
+	--indicatorColor: theme('colors.me-mga.dark');
+	--indicatorTop: 0px;
+	--listZIndex: 99999;
+}
+
+.sel-purple {
+	--height: 2rem;
+	--indicatorHeight: 2rem;
+	--itemIsActiveColor: #000;
+	--itemHoverColor: #fff;
+	--itemIsActiveBG: theme('colors.me-ic.light');
+	--itemHoverBG: theme('colors.me-ic.dark');
+	--border: 2px solid theme('colors.me-ic.dark');
+	--borderFocusColor: theme('colors.me-ic.dark');
+	--borderHoverColor: theme('colors.me-ic.dark');
+	--indicatorColor: theme('colors.me-ic.dark');
+	--indicatorTop: 0px;
+	--listZIndex: 99999;
+}
+
+@layer components {
+	input {
+		@apply pl-1 border-2 border-primary border-solid rounded h-8 focus:outline-none focus:ring-0;
+	}
+	.cbx {
+		@apply rounded focus:ring-0 focus:outline-none;
+	}
+	.btn {
+		@apply m-1 px-5 py-3 shadow-sm transition ease-in-out duration-300 rounded leading-snug whitespace-nowrap text-base font-semibold disabled:opacity-50 disabled:cursor-not-allowed;
+	}
+	.btn-blue {
+		@apply btn bg-primary text-white;
+	}
+	.btn-blue-inverted {
+		@apply btn bg-white text-primary
+	}
+	.btn-blue-outline {
+		@apply btn text-primary border border-primary border-solid;
+	}
+	.btn-lghtblue {
+		@apply btn bg-me-contact-dark text-white;
+	}
+	.btn-lghtblue-outline {
+		@apply btn text-me-contact-dark border border-me-contact-dark border-solid;
+	}
+	.btn-green {
+		@apply btn text-white bg-me-mga-dark;
+	}
+	.btn-green-outline {
+		@apply btn text-me-mga-dark border border-me-mga-dark border-solid;
+	}
+	.btn-purple {
+		@apply btn text-white bg-me-ic-dark;
+	}
+	.btn-purple-outline {
+		@apply btn text-me-ic-dark border border-me-ic-dark border-solid;
+	}
+	.btn-orange {
+		@apply btn text-white bg-me-orange;
+	}
+	.btn-orange-outline {
+		@apply btn text-me-orange border border-me-orange border-solid;
+	}
+}

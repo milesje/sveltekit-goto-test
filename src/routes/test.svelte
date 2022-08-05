@@ -2,4 +2,4 @@
 	import { goto } from '$app/navigation'
 </script>
 
-<button on:click={goto('/')}>Home</button>
+<button class="btn-blue" on:click={goto('/')}>Home</button>
